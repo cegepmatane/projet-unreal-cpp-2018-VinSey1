@@ -15,6 +15,10 @@ public:
 	// Sets default values for this actor's properties
 	AEnnemi();
 
+private:
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Visuel", meta = (AllowPrivateAccess = "true"))
+	class UStaticMeshComponent * corpsEnnemi;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -22,7 +26,6 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+	FORCEINLINE class UStaticMeshComponent * getCorpsEnnemi() const { return this->corpsEnnemi; }
 
-	
-	
 };
