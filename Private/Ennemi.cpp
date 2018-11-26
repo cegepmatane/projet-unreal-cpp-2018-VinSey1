@@ -28,7 +28,7 @@ void AEnnemi::Tick(float DeltaTime)
 
 }
 
-int AEnnemi::getVitesseDeDeplacement() {
-	return this->vitesseDeDeplacement;
+int AEnnemi::getVitesse() {
+	return this->vitesse;
 }
 
