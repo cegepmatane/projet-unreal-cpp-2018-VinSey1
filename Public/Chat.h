@@ -18,6 +18,8 @@ public:
 	AChat();
 	UFUNCTION(BlueprintPure, Category = "Etat")
 		int getTaille();
+	UFUNCTION(BlueprintCallable, Category = "Attaque")
+		void griffer(AActor* acteur);
 
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Options", meta = (AllowPrivateAccess = "true"))
