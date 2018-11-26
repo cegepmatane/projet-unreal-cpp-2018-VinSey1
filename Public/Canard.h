@@ -18,6 +18,8 @@ public:
 	ACanard();
 	UFUNCTION(BlueprintPure, Category = "Etat")
 		int getZoneDeDetection();
+	UFUNCTION(BlueprintCallable, Category = "Attaque")
+		void picocher(AActor* acteur);
 
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Options", meta = (AllowPrivateAccess = "true"))
