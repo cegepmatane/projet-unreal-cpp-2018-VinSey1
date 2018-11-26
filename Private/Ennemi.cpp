@@ -31,4 +31,3 @@ void AEnnemi::Tick(float DeltaTime)
 int AEnnemi::getVitesse() {
 	return this->vitesse;
 }
-

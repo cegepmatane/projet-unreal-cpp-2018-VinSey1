@@ -14,7 +14,12 @@ class CHASSEMANGER_API AChien : public AEnnemi
 {
 	GENERATED_BODY()
 	
+public:
+	AChien();
+	UFUNCTION(BlueprintPure, Category = "Etat")
+		int getDegats();
 	
-	
-	
+private:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Options", meta = (AllowPrivateAccess = "true"))
+		int degats;
 };
