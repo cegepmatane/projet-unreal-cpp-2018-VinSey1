@@ -18,6 +18,8 @@ public:
 	AChien();
 	UFUNCTION(BlueprintPure, Category = "Etat")
 		int getDegats();
+	UFUNCTION(BlueprintCallable, Category = "Attaque")
+		void mordre(AActor* acteur);
 	
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Options", meta = (AllowPrivateAccess = "true"))

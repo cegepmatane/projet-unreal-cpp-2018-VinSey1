@@ -3,7 +3,6 @@
 #include "Ennemi.h"
 #include "Components/StaticMeshComponent.h"
 
-
 // Sets default values
 AEnnemi::AEnnemi()
 {
@@ -11,7 +10,6 @@ AEnnemi::AEnnemi()
 	PrimaryActorTick.bCanEverTick = false;
 	this->corpsEnnemi = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Corps Ennemi"));
 	this->RootComponent = this->corpsEnnemi;
-
 }
 
 // Called when the game starts or when spawned
