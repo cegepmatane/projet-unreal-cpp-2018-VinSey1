@@ -18,6 +18,7 @@ public:
 private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Visuel", meta = (AllowPrivateAccess = "true"))
 	class UStaticMeshComponent * corpsEnnemi;
+	int vitesseDeDeplacement;
 
 protected:
 	// Called when the game starts or when spawned
@@ -27,5 +28,7 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 	FORCEINLINE class UStaticMeshComponent * getCorpsEnnemi() const { return this->corpsEnnemi; }
+	UFUNCTION(BlueprintPure, Category = "Etat")
+		int getVitesseDeDeplacement();
 
 };
