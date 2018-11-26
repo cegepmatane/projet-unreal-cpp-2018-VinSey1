@@ -14,7 +14,12 @@ class CHASSEMANGER_API AChat : public AEnnemi
 {
 	GENERATED_BODY()
 	
-	
-	
-	
+public:
+	AChat();
+	UFUNCTION(BlueprintPure, Category = "Etat")
+		int getTaille();
+
+private:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Options", meta = (AllowPrivateAccess = "true"))
+		int taille;
 };
