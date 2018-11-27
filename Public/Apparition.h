@@ -18,11 +18,23 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+	UPROPERTY(EditAnywhere, Category = "Apparition")
+	TSubclassOf<class AActor> objetApparition;
+	FTimerHandle minuteur;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Apparition")
+	float delaiMinimum;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Apparition")
+	float delaiMaximum;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Apparition", meta = (AllowPrivateAccess = "true"))
+	class UBoxComponent * lieuApparition;
+	float delai = 4.0f;
 
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-
-	
+	FORCEINLINE class UBoxComponent* getLieuApparition() const { return this->lieuApparition; }
+	UFUNCTION(BlueprintPure, Category = "Apparition")
+	FVector getPointsAuHasard();
+	void apparaitre();
 	
 };
