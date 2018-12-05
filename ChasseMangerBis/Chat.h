@@ -7,13 +7,13 @@
 #include "Chat.generated.h"
 
 /**
- * 
+ *
  */
 UCLASS()
-class CHASSEMANGER_API AChat : public AEnnemi
+class CHASSEMANGERBIS_API AChat : public AEnnemi
 {
 	GENERATED_BODY()
-	
+
 public:
 	AChat();
 	UFUNCTION(BlueprintPure, Category = "Etat")

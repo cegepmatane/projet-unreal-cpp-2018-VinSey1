@@ -7,26 +7,26 @@
 #include "Ennemi.generated.h"
 
 UCLASS()
-class CHASSEMANGER_API AEnnemi : public AActor
+class CHASSEMANGERBIS_API AEnnemi : public AActor
 {
 	GENERATED_BODY()
-	
-public:	
+
+public:
 	// Sets default values for this actor's properties
 	AEnnemi();
 
 private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Visuel", meta = (AllowPrivateAccess = "true"))
-	class UStaticMeshComponent * corpsEnnemi;
+		class UStaticMeshComponent * corpsEnnemi;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Options", meta = (AllowPrivateAccess = "true"))
-	int vitesse;
+		int vitesse;
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:	
+public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 	FORCEINLINE class UStaticMeshComponent * getCorpsEnnemi() const { return this->corpsEnnemi; }

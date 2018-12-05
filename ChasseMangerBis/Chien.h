@@ -4,24 +4,24 @@
 
 #include "CoreMinimal.h"
 #include "Ennemi.h"
-#include "Canard.generated.h"
+#include "Chien.generated.h"
 
 /**
- * 
+ *
  */
 UCLASS()
-class CHASSEMANGER_API ACanard : public AEnnemi
+class CHASSEMANGERBIS_API AChien : public AEnnemi
 {
 	GENERATED_BODY()
-	
+
 public:
-	ACanard();
+	AChien();
 	UFUNCTION(BlueprintPure, Category = "Etat")
-		int getZoneDeDetection();
+		int getDegats();
 	UFUNCTION(BlueprintCallable, Category = "Attaque")
-		void picocher(AActor* acteur);
+		void mordre(AActor* acteur);
 
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Options", meta = (AllowPrivateAccess = "true"))
-		int zoneDeDetection;
+		int degats;
 };

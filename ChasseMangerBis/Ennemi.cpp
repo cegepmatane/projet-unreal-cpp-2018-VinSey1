@@ -6,7 +6,7 @@
 // Sets default values
 AEnnemi::AEnnemi()
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = false;
 	this->corpsEnnemi = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Corps Ennemi"));
 	this->RootComponent = this->corpsEnnemi;
@@ -16,7 +16,7 @@ AEnnemi::AEnnemi()
 void AEnnemi::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
 }
 
 // Called every frame
