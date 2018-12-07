@@ -3,11 +3,11 @@
 using UnrealBuildTool;
 using System.Collections.Generic;
 
-public class ChasseMangerBisTarget : TargetRules
+public class ChasseMangerTarget : TargetRules
 {
-	public ChasseMangerBisTarget(TargetInfo Target) : base(Target)
+	public ChasseMangerTarget(TargetInfo Target) : base(Target)
 	{
 		Type = TargetType.Game;
-		ExtraModuleNames.Add("ChasseMangerBis");
+		ExtraModuleNames.Add("ChasseManger");
 	}
 }

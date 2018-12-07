@@ -2,9 +2,9 @@
 
 using UnrealBuildTool;
 
-public class ChasseMangerBis : ModuleRules
+public class ChasseManger : ModuleRules
 {
-	public ChasseMangerBis(ReadOnlyTargetRules Target) : base(Target)
+	public ChasseManger(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 

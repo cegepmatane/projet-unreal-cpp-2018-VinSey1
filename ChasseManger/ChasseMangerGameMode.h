@@ -4,15 +4,15 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
-#include "ChasseMangerBisGameMode.generated.h"
+#include "ChasseMangerGameMode.generated.h"
 
 UCLASS(minimalapi)
-class AChasseMangerBisGameMode : public AGameModeBase
+class AChasseMangerGameMode : public AGameModeBase
 {
 	GENERATED_BODY()
 
 public:
-	AChasseMangerBisGameMode();
+	AChasseMangerGameMode();
 };
 
 

@@ -7,7 +7,7 @@
 #include "Apparition.generated.h"
 
 UCLASS()
-class CHASSEMANGERBIS_API AApparition : public AActor
+class CHASSEMANGER_API AApparition : public AActor
 {
 	GENERATED_BODY()
 
