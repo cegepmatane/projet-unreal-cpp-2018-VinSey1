@@ -53,7 +53,7 @@ AChasseMangerCharacter::AChasseMangerCharacter()
 	this->attrapeur->SetSimulatePhysics(true);
 	this->attrapeur->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
 	this->attrapeur->AttachTo(this->RootComponent);
-	this->attrapeur->SetSphereRadius(2000.f);
+	this->attrapeur->SetSphereRadius(200.f);
 	this->puissance = 2000.0f;
 }
 
@@ -152,10 +152,10 @@ void AChasseMangerCharacter::attraperNourriture()
 	this->attrapeur->GetOverlappingActors(listeNourriture);
 	for (int32 position = 0; position < listeNourriture.Num(); position++)
 	{
-		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Objet attrapé"));
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Objet attrape"));
 		AActor * acteur = listeNourriture[position];
 		ANourriture * nourriture = Cast<ANourriture>(acteur);
-		if (nourriture)
+		if (nourriture && !nourriture->IsPendingKill())
 		{
 			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Nourriture !"));
 			this->changerPuissance(nourriture->getCalorie());

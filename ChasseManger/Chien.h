@@ -23,5 +23,5 @@ public:
 
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Options", meta = (AllowPrivateAccess = "true"))
-		int degats;
+	int degats;
 };
