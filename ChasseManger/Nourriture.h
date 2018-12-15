@@ -32,6 +32,7 @@ public:
 	FORCEINLINE float getCalorie() { return this->calorie; }
 	FORCEINLINE class UStaticMeshComponent * getCorpsNourriture() const { return this->corpsNourriture; }
 	FORCEINLINE class UStaticMeshComponent * getTigeNourriture() const { return this->tigeNourriture; }
+	void adapterTailleAuLieu(FVector point);
 
 private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Visuel", meta = (AllowPrivateAccess = "true"))

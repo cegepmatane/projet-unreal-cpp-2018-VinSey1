@@ -32,3 +32,9 @@ void ANourriture::Tick(float DeltaTime)
 void ANourriture::estAttrape_Implementation() {
 	UE_LOG(LogClass, Log, TEXT("AEnergiePure::estAttrapeImplementation"));
 }
+
+void ANourriture::adapterTailleAuLieu(FVector point)
+{
+	float taille = point.Y / 5000;
+	this->getCorpsNourriture()->SetRelativeScale3D(FVector(taille, taille, taille));
+}

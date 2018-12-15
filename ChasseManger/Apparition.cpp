@@ -5,6 +5,7 @@
 #include "Kismet/KismetMathLibrary.h"
 #include "Engine/World.h"
 #include "Runtime/Engine/Public/TimerManager.h"
+#include "Nourriture.h"
 
 // Sets default values
 AApparition::AApparition()
@@ -56,7 +57,11 @@ void AApparition::apparaitre()
 	rotation.Pitch = FMath::FRand() * 360.0f;
 	rotation.Roll = FMath::FRand() * 360.0f;
 
-	monde->SpawnActor<AActor>(this->objetApparition, lieuApparition, rotation, parametresApparition);
+	ANourriture * nouvelleNourriture = monde->SpawnActor<ANourriture>(this->objetApparition, lieuApparition, rotation, parametresApparition);
+
+	if (nouvelleNourriture) {
+		nouvelleNourriture->adapterTailleAuLieu(lieuApparition);
+	}
 
 	this->delai = FMath::FRandRange(delaiMinimum, delaiMaximum);
 }
